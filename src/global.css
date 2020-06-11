@@ -1,0 +1,13 @@
+#apps {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#apps > section {
+    width: 50vw;
+    height: 50vh;
+}
+
+body{
+    overflow: hidden;
+}

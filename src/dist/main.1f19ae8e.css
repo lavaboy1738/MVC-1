@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, ol {
+    list-style: none;
+}
+#apps {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#apps > section {
+    width: 50vw;
+    height: 50vh;
+}
+
+body{
+    overflow: hidden;
+}
+#app1 {
+    border: 1px solid red;
+}
+#app1 .output {}
+#app1 .actions {}
+
+
+#app2 {
+    border: 1px solid blue;
+}
+
+#app2 .tab-bar {
+    display: flex;
+}
+
+#app2 .tab-bar > li{
+    border: 2px solid black;
+    width: 50%;
+}
+#app2 .tab-content {}
+
+#app2 .tab-content > li {
+    display: none;
+}
+
+/*# sourceMappingURL=/main.1f19ae8e.css.map */
