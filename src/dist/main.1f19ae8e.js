@@ -11330,8 +11330,12 @@ var _jquery = _interopRequireDefault(require("jquery"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var $tabBar = (0, _jquery.default)("#app2 .tab-bar");
+var $tabContent = (0, _jquery.default)("#app2 .tab-content");
 $tabBar.on("click", "li", function (e) {
-  console.log(e.currentTarget);
+  var $li = (0, _jquery.default)(e.currentTarget);
+  var index = $li.index();
+  $li.addClass("selected").siblings().removeClass("selected");
+  $tabContent.children().eq(index).addClass("active").siblings().removeClass("active");
 });
 },{"jquery":"../node_modules/jquery/dist/jquery.js"}],"app2.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');

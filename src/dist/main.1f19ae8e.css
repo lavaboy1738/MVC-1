@@ -39,10 +39,19 @@ body{
     border: 2px solid black;
     width: 50%;
 }
+
+#app2 .tab-bar > li.selected{
+    background-color: yellow;
+}
+
 #app2 .tab-content {}
 
 #app2 .tab-content > li {
     display: none;
+}
+
+#app2 .tab-content > li.active {
+    display: block;
 }
 
 /*# sourceMappingURL=/main.1f19ae8e.css.map */
