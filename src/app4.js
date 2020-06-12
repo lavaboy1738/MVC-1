@@ -1,4 +1,4 @@
-import "./app4.css"
+import "../src/app4.css"
 import $ from "jquery"
 
 const $circle = $("#app4 .circle");
