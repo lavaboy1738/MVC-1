@@ -5,8 +5,8 @@
 #app4 .circle{
     width: 10vw;
     height: 10vw;
-    margin-top: calc(50% - 8vw);
-    margin-left: calc(50% - 5vw);
+    margin-top: 20%;
+    margin-left: 20%;
     border: 5px solid red;
     border-radius: 50%;
 }

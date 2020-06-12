@@ -11294,6 +11294,8 @@ require("../src/app1.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var html = "\n        <section id=\"app1\">\n            <div class=\"output\">\n                <span id=\"number\"></span>\n            </div>\n            <div class=\"actions\">\n                <button id=\"add1\">+1</button>\n                <button id=\"minus1\">-1</button>\n                <button id=\"multiply2\">\xD72</button>\n                <button id=\"divide2\">\xF72</button>\n            </div>\n        </section>\n";
+var $element = (0, _jquery.default)(html).appendTo((0, _jquery.default)("body>#apps"));
 var $button1 = (0, _jquery.default)("#add1");
 var $button2 = (0, _jquery.default)("#minus1");
 var $button3 = (0, _jquery.default)("#multiply2");
@@ -11338,10 +11340,12 @@ require("../src/app2.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var html = "\n        <section id=\"app2\">\n            <ol class=\"tab-bar\">\n                <li>1</li>\n                <li>2</li>\n            </ol>\n            <ul class=\"tab-content\">\n                <li>content1</li>\n                <li>content2</li>\n            </ul>\n        </section>\n";
+var $element = (0, _jquery.default)(html).appendTo((0, _jquery.default)("body>#apps"));
 var $tabBar = (0, _jquery.default)("#app2 .tab-bar");
 var $tabContent = (0, _jquery.default)("#app2 .tab-content");
 var localKey = "app2-index";
-var index = localStorage.getItem(localKey);
+var index = localStorage.getItem(localKey) || 0;
 $tabBar.on("click", "li", function (e) {
   var $li = (0, _jquery.default)(e.currentTarget);
   var index = $li.index();
@@ -11364,9 +11368,20 @@ var _jquery = _interopRequireDefault(require("jquery"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var html = "\n        <section id=\"app3\">\n            <div class=\"square\"></div>\n        </section>\n";
+var $element = (0, _jquery.default)(html).appendTo((0, _jquery.default)("body>#apps"));
 var $square = (0, _jquery.default)("#app3 .square");
+var localKey = "app3-active";
+var active = localStorage.getItem(localKey) === "yes";
+$square.toggleClass("active", active);
 $square.on("click", function () {
-  $square.toggleClass("active");
+  if ($square.hasClass("active")) {
+    $square.removeClass("active");
+    localStorage.setItem(localKey, "no");
+  } else {
+    $square.addClass("active");
+    localStorage.setItem(localKey, "yes");
+  }
 });
 },{"../src/app3.css":"app3.css","jquery":"../node_modules/jquery/dist/jquery.js"}],"app4.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
@@ -11382,6 +11397,8 @@ var _jquery = _interopRequireDefault(require("jquery"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var html = "\n        <section id=\"app4\">\n            <div class=\"circle\"></div>\n        </section>\n";
+var $element = (0, _jquery.default)(html).appendTo((0, _jquery.default)("body>#apps"));
 var $circle = (0, _jquery.default)("#app4 .circle");
 $circle.on("mouseenter", function () {
   $circle.addClass("active");
@@ -11430,7 +11447,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49971" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54077" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

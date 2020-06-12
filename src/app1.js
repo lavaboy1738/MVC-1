@@ -1,6 +1,21 @@
 import $ from "jquery"
 import "../src/app1.css"
 
+const html = `
+        <section id="app1">
+            <div class="output">
+                <span id="number"></span>
+            </div>
+            <div class="actions">
+                <button id="add1">+1</button>
+                <button id="minus1">-1</button>
+                <button id="multiply2">×2</button>
+                <button id="divide2">÷2</button>
+            </div>
+        </section>
+`
+const $element = $(html).appendTo($("body>#apps"))
+
 const $button1 = $("#add1")
 const $button2 = $("#minus1")
 const $button3 = $("#multiply2")
