@@ -1,0 +1,109 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul, ol {
+    list-style: none;
+}
+#apps {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#apps > section {
+    width: 50vw;
+    height: 50vh;
+}
+
+body{
+    overflow: hidden;
+}
+#app1 {
+    border: 10px solid red;
+}
+#app1 .output {}
+#app1 .actions {}
+
+
+#app2 {
+    border: 10px solid blue;
+}
+
+#app2 .tab-bar {
+    display: flex;
+}
+
+#app2 .tab-bar > li{
+    border: 2px solid black;
+    width: 50%;
+}
+
+#app2 .tab-bar > li.selected{
+    background-color: yellow;
+}
+
+#app2 .tab-content {}
+
+#app2 .tab-content > li {
+    display: none;
+}
+
+#app2 .tab-content > li.active {
+    display: block;
+}
+#app3 {
+    border: 10px solid forestgreen;
+}
+
+#app3 .square {
+    width: 10vw;
+    height: 10vw;
+    border: 2px solid orange;
+    margin-top: 20%;
+    margin-left: 10%;
+    transition: 0.3s all ease;
+}
+
+#app3 .square.active{
+    border-radius: 50%;
+    transform: translateX(20vw);
+}
+#app4 {
+    border: 10px solid yellow;
+}
+
+#app4 .circle{
+    width: 10vw;
+    height: 10vw;
+    margin-top: calc(50% - 8vw);
+    margin-left: calc(50% - 5vw);
+    border: 5px solid red;
+    border-radius: 50%;
+}
+
+@keyframes changeColor {
+    0%{
+        background: red;
+    }
+    25%{
+        background: teal;
+    }
+    50%{
+        background: yellowgreen;
+    }
+    75%{
+        background: whitesmoke;
+    }
+    100%{
+        background: tomato;
+    }
+}
+
+#app4 .circle.active{
+    animation: changeColor 5s infinite alternate linear;
+}
+
+
+/*# sourceMappingURL=/main.1f19ae8e.css.map */

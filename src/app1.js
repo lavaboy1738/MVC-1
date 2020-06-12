@@ -1,5 +1,5 @@
 import $ from "jquery"
-
+import "./app1.css"
 
 const $button1 = $("#add1")
 const $button2 = $("#minus1")
